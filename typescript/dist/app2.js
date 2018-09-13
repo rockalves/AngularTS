@@ -17,8 +17,9 @@ var Carro = /** @class */ (function () {
     return Carro;
 }());
 var Concessionaria = /** @class */ (function () {
-    function Concessionaria(endereco) {
+    function Concessionaria(endereco, listaDeCarros) {
         this.endereco = endereco;
+        this.listaDeCarros = listaDeCarros;
     }
     Concessionaria.prototype.fornecerEndereco = function () {
         return this.endereco;
@@ -47,3 +48,10 @@ var Pessoa = /** @class */ (function () {
     };
     return Pessoa;
 }());
+/*-- Criar carros----*/
+var carroA = new Carro('Tucson', 5);
+var carroB = new Carro('Veloster', 3);
+var carroC = new Carro('Santana', 4);
+/*-- Montar lista de carros da concessionária---*/
+var listaDeCarros = [carroA, carroB, carroC];
+var concessionaria = new Concessionaria('Rua das Papoulas, 451', listaDeCarros);
