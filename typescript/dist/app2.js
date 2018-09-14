@@ -55,3 +55,16 @@ var carroC = new Carro('Santana', 4);
 /*-- Montar lista de carros da concessionária---*/
 var listaDeCarros = [carroA, carroB, carroC];
 var concessionaria = new Concessionaria('Rua das Papoulas, 451', listaDeCarros);
+/**Exibir lista de carros */
+//console.log(concessionaria.mostrarListaDeCarros())
+/** --Comprar o carro */
+var cliente = new Pessoa('André', 'Tucson');
+//console.log(cliente.dizerCarroPreferido())
+concessionaria.mostrarListaDeCarros().map(function (carro) {
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        //compra o carro
+        cliente.comprarCarro(carro);
+    }
+    //console.log(carro)
+});
+console.log(cliente.dizerQueCarroTem());
