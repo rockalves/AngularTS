@@ -1,21 +1,27 @@
-import {ConcessionariaDao} from './ConcessionariaDao'
+//import { ConcessionariaDao } from './ConcessionariaDao'
+//import {MotoDao} from './MotoDao'
+//import { CarroDao } from './CarroDao'
+//import { PessoaDao } from './PessoaDao'
 import Concessionaria from './Concessionaria'
-import { PessoaDao } from './PessoaDao';
-import Pessoa from './Pessoa';
-import {CarroDao} from './CarroDao'
+import Pessoa from './Pessoa'
+import Carro from './Carro'
+import Moto from './Moto'
+import { Dao } from './Dao';
 
-let dao: ConcessionariaDao = new ConcessionariaDao()
-let concessionaria = new Concessionaria('',[])
+//let dao: ConcessionariaDao = new ConcessionariaDao()
+//let dao2: PessoaDao = new PessoaDao()
+//let dao3: CarroDao = new CarroDao()
+//let dao4: MotoDao = new MotoDao()
 
-dao.inserir(concessionaria)
 
-let dao2:PessoaDao = new PessoaDao()
-let pessoa: Pessoa = new Pessoa('','')
+let concessionaria = new Concessionaria('', [])
+let pessoa: Pessoa = new Pessoa('', '')
+let carro: Carro = new Carro('', 3)
+let moto: Moto = new Moto()
 
-dao2.atualizar(pessoa)
+let dao5: Dao<Concessionaria> = new Dao<Concessionaria>();
+let dao6: Dao<Pessoa> = new Dao<Pessoa>()
+dao5.inserir(concessionaria);
+dao6.remover(1)
 
-let dao3:CarroDao = new CarroDao()
-let carro: Pessoa = new Pessoa('','')
-
-dao2.atualizar(carro)
 
