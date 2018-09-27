@@ -26,6 +26,6 @@ import {Component} from 'node_modules/@angular/core'
 )
 
 export class TopoComponent{
-
+    public titulo: string='String Interpolation'
 
 }
