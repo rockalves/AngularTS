@@ -30,8 +30,12 @@
                     <textarea 
                     class="form-control" 
                     rows="3"
-                    (input)="atualizaResposta()"> 
-                </textarea><!--Event binding: Realiza a captura do evento de insercao de texto, chamando o método ts -->
+                    (input)="atualizaResposta($event)"> 
+                </textarea>
+                <!--Event binding: Realiza a captura do evento de insercao de texto, chamando o método ts 
+                $event copia a string do campo texto
+                -->
+
                 </div>
             </div>
         </div>
