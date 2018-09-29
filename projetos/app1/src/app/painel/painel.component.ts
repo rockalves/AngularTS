@@ -17,7 +17,7 @@ export class PainelComponent implements OnInit {
   ngOnInit() {
   }
 
-  public atualizaResposta(resposta :Event):void{
+  public atualizaResposta(resposta:Event):void{
     console.log(resposta);
     console.log("<- Qtd evento input - Teste");
   }
