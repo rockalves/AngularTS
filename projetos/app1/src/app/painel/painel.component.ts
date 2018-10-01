@@ -20,11 +20,13 @@ export class PainelComponent implements OnInit {
 
   public atualizaResposta(resposta: Event): void {
     this.resposta = (<HTMLInputElement>resposta.target).value
-    console.log(this.resposta)
+    //console.log(this.resposta)
     //console.log((<HTMLInputElement>resposta.target).value);
     //Obtem o valor completo do input.
-    //console.log("<- Qtd evento input - Teste");
-  }
 
+  }
+public verificarResposta():void{
+  console.log('Verificar resposta: ', this.resposta)
+}
 
 }
