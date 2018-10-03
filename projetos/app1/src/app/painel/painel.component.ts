@@ -11,7 +11,7 @@ export class PainelComponent implements OnInit {
 
   public instrucao: string = 'Traduza a frase:'
   public frases: Frase[] = FRASES //Instancia do array de frases, passando como atributo o mock (enum) de frases
-  public resposta: string
+  public resposta: string = ''
 
   public rodada: number = 0
   rodadaFrase: Frase
@@ -19,9 +19,8 @@ export class PainelComponent implements OnInit {
   public progresso: number = 0
 
   constructor() {
-    this.rodadaFrase = this.frases[this.rodada]
-    console.log(this.rodadaFrase)
-  } //loga o array de frases
+    this.atualizaRodada()
+  }
 
   ngOnInit() {
   }
@@ -44,8 +43,9 @@ export class PainelComponent implements OnInit {
       this.progresso = this.progresso + (100 / this.frases.length)
       console.log(this.progresso)
 
-      //Atualiza o objeto rodaddaFrase
-      this.rodadaFrase = this.frases[this.rodada]
+      //Atualiza o objeto rodadaFrase
+      this.atualizaRodada()
+
 
     } else {
       alert('A tradução está errada!')
@@ -53,5 +53,11 @@ export class PainelComponent implements OnInit {
 
     //console.log('Verificar resposta: ', this.resposta)
   }
-
+  public atualizaRodada(): void {
+    //define a frase da rodada com base em alguma lógica
+    this.rodadaFrase = this.frases[this.rodada]
+    
+    //limpar a resposta
+    this.resposta = ''
+  }
 }
