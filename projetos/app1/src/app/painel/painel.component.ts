@@ -16,6 +16,8 @@ export class PainelComponent implements OnInit {
   public rodada: number = 0
   rodadaFrase: Frase
 
+  public progresso: number = 0
+
   constructor() {
     this.rodadaFrase = this.frases[this.rodada]
     console.log(this.rodadaFrase)
@@ -37,10 +39,14 @@ export class PainelComponent implements OnInit {
       alert('A tradução está correta!')
       //Trocar pergunta da rodada;
       this.rodada++
-      
+
+      //Evolui barra de progresso
+      this.progresso = this.progresso + (100 / this.frases.length)
+      console.log(this.progresso)
+
       //Atualiza o objeto rodaddaFrase
       this.rodadaFrase = this.frases[this.rodada]
-      
+
     } else {
       alert('A tradução está errada!')
     }
