@@ -32,7 +32,12 @@ export class PainelComponent implements OnInit {
 
   }
   public verificarResposta(): void {
-    console.log('Verificar resposta: ', this.resposta)
+    //Trocar pergunta da rodada;
+    this.rodada++
+    console.log(this.rodada)
+    this.rodadaFrase=this.frases[this.rodada]
+    console.log(this.rodadaFrase)
+    //console.log('Verificar resposta: ', this.resposta)
   }
 
 }
