@@ -1,7 +1,10 @@
-<img [src]="coracaoVazio">
-<img [src]="coracaoCheio">
-<img [src]="coracaoCheio">
+<img *ngFor="let coracao of coracoes" [src]="coracao.exibeCoracao()" />
 
+<!--
+<img [src]="coracaoVazio" />
+<img [src]="coracaoCheio" />
+<img [src]="coracaoCheio" />
+-->
 
 <!--Property binding, é possivel passar parametros das tags html,
     utilizando o atributo entre colchetes [], passando a variável 
