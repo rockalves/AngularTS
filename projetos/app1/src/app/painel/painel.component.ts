@@ -26,16 +26,13 @@ export class PainelComponent implements OnInit {
 
   ngOnInit() {
   }
-
   public atualizaResposta(resposta: Event): void {
     this.resposta = (<HTMLInputElement>resposta.target).value
     //console.log(this.resposta)
     //console.log((<HTMLInputElement>resposta.target).value);
     //Obtem o valor completo do input.
-
   }
   public verificarResposta(): void {
-
     console.log(this.tentativas)
     if (this.rodadaFrase.frasePtBr == this.resposta) {
       alert('A tradução está correta!')
@@ -48,16 +45,12 @@ export class PainelComponent implements OnInit {
 
       //Atualiza o objeto rodadaFrase
       this.atualizaRodada()
-
-
     } else {
-      
       //decrementa valor da variavel e tentativas ao errar a resposta
       this.tentativas--
       if (this.tentativas === -1 ){
         alert('Você perdeu todas as tentativas')
       }
-      
     }
     console.log(this.tentativas)
     //console.log('Verificar resposta: ', this.resposta)
