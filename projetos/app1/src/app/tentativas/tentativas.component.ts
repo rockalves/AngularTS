@@ -7,8 +7,7 @@ import { Coracao } from '../shared/coracao.model'
   styleUrls: ['./tentativas.component.css']
 })
 export class TentativasComponent implements OnInit {
-  public coracaoVazio: string = '/assets/coracao_vazio.png';
-  public coracaoCheio: string = '/assets/coracao_cheio.png';
+
   
   @Input() public tentativas: number
 
@@ -17,10 +16,11 @@ export class TentativasComponent implements OnInit {
   ]
   constructor() { 
     console.log(this.coracoes)
-    console.log('tentativas do painel',this.tentativas)
+    
   }
 
   ngOnInit() {
+    console.log('tentativas recebidas do painel: ',this.tentativas)
   }
 
 }
