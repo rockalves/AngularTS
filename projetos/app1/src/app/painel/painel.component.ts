@@ -41,18 +41,20 @@ export class PainelComponent implements OnInit {
 
       //Evolui barra de progresso
       this.progresso = this.progresso + (100 / this.frases.length)
-      console.log(this.progresso)
+      
 
       //Atualiza o objeto rodadaFrase
       this.atualizaRodada()
     } else {
       //decrementa valor da variavel e tentativas ao errar a resposta
       this.tentativas--
+
+  
       if (this.tentativas === -1 ){
         alert('Você perdeu todas as tentativas')
       }
     }
-    console.log(this.tentativas)
+ 
     //console.log('Verificar resposta: ', this.resposta)
   }
   public atualizaRodada(): void {
